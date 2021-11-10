@@ -9,16 +9,430 @@
 
     <style>
     </style>
+
+
+<!-- For the Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Limelight&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
 
-<p>Some text</p>
+<!-- The div that contains text "Enter name",
+the "X:", its enclosing div, the "0:", its 
+enclosing div, the four inputs and 
+everything associated with the dd lists -->    
+<div id = "userFormDiv" class = "userForm"> <!-- Closed on line 88 --> 
+  <p class = "userFormTitleP">
+  Enter name
+  </p>
+
+  <div class = "xBox"><!-- The div that contains label "X")-->
+  <p class = "formXp"> X: </p> <!-- The "X" itself)-->
+  </div>
+  <div class = "nameXdiv"> <!-- div containing X name input, "or" <p> and X ddlist input-->
+    <input type="text" id="xInput" value="" maxlength="5"> <!-- The input where user types in X name-->
+    <input disabled = "true" type="text" id="xInput1" value="" maxlength="5"><!--input for ddlistX selection-->
+    <p class = "or">or</p>
+  </div>
+
+  <div class = "zeroBox"><!-- The div that contains label "0")-->
+    <p class = "form0p"> 0: </p> <!-- The "0" itself)--> 
+  </div>
+  <div class = "name0div"> <!-- div containing 0 name input, "or" <p> and 0 ddlist input-->
+    <input type="text" id="zeroInput" value="" maxlength="5"> <!-- The input where user types in 0 name-->
+    <input disabled = "true" type="text" id="zeroInput1" value="" maxlength="5"><!--input for ddlist0 selection-->
+    <p class = "or">or</p>
+  </div>
+
+  <!--NOTE: The button to accept both user names
+  is outside the div that encloses all this stuff-->    
+
+<!--Now html for the dd lists,
+one for X players, one for 0 
+players -->
+
+<!--The dd list for X players -->
+<!--The dd list main div (this is what shows
+  when user has not clicked the dd list)-->  
+  <div id = "ddListMainDivXid" class = "ddListMainDivXclass">
+    <p  id = "ddListMainPxID"  class = "ddListMainPxClass">Existing >></p>
+  </div>
+  <!--The enclosing div for the X dd list -->
+<div id = "ddListEnclosureXid" class = "ddListEnclosureClass">
+  <div id = "ddListClearXid" class = "ddListClearClass">
+    <p class = "ddListClearPclass">***Clear***</p>
+  </div>
+  </div> <!-- end enclosing div This div is invisible-->
+
+
+<!--The dd list for 0 players -->
+<!--The dd list main div (this is what shows
+  when user has not clicked the dd list)-->  
+  <div id = "ddListMainDiv0id" class = "ddListMainDiv0class">
+    <p  id = "ddListMainP0ID"  class = "ddListMainP0Class">Existing >></p>
+  </div>
+<!--The enclosing div for the 0 dd list -->
+<div id = "ddListEnclosure0id" class = "ddListEnclosureClass">
+  <div id = "ddListClear0id" class = "ddListClearClass">
+    <p class = "ddListClearPclass">***Clear***</p>
+  </div>
+</div> <!-- end enclosing div This div is invisible-->
+
+</div> <!--End The div that contains text "Enter your name")-->    
+
+<!-- ---------- ----------  ---------- ----------  ---------- ---------- --> 
+
+  <!--The button to accept both user names,
+  the <p> for its text and its enclosing
+    div-->    
+
+<div class = "takeUserNamesEnclosure">
+  <div class = "takeUserNames button">
+    <p class = "takeUserNamesP">+</p>
+  </div>
+</div>
+<!-- ---------- ----------  ---------- ----------  ---------- ---------- --> 
+
+<!-- 
+First a div that contains text 
+"Pick type of game"
+Then the divs (buttons) that let the user pick 
+either a two-person game in which noughts play crosses
+or a game against the computer (ie against Gandhi, 
+Picard or the T1000)
+-->    
+
+<div id = "pickGameDiv" class = "pickGame">
+  <p class = "pickGameP">
+  Pick type of game >
+  </p>
+</div>
+
+<!-- 
+The divs representing:
+1) the buttons the user can click to select the type of game
+2) the enclosing div of the buttons
+-->    
+
+<div id = "buttEncl" class = "buttonEnclosure">
+  <div id = "twoPlayerButt" class = "button twoPlayerButton">
+    <p class = "buttonText">
+      Two player
+    </p>
+  </div> 
+  <div id = "aIButt" class = "button aIButton">
+    <p class = "buttonText">
+      Play the AI
+    </p>
+  </div>
+</div>
+
+
+
+<!-- 
+The enclosure for the New Game button,
+The New game button
+-->    
+<div class = "newGameEnclosure">
+<div id = "newGameButt" class = "button newGameButton">
+  <p class = "buttonText">
+    New game
+  </p>
+</div>
+</div>
+
+
+<!-- 
+Div that encloses the 
+nine squares and the separating lines
+(red 1px border)
+-->    
+<div class = "enclosingDiv">
+
+<!-- 
+The nine divs that 
+are squares in which the
+noughts and crosses
+will appear. Each div contains a <p>
+The attrib data-number is useful for 
+selecting a square reference that 
+appears in the JS file in an array of 
+references to all the squares 
+-->    
+
+<!-- row1pos1 -->    
+<div class = "places centreTextInSquares square " id = "s00"  data-number ="0">
+  <p id = "p0-0"></p>
+</div>
+<!-- row1pos2 -->    
+<div class = "places centreTextInSquares square " id = "s01"  data-number ="1">
+  <p id = "p0-1"></p>
+</div>
+<!-- row1pos3 -->    
+<div class = "places centreTextInSquares square " id = "s02"  data-number ="2">
+  <p id = "p0-2"></p>
+</div>
+
+<!-- row2pos1 -->    
+<div class = "places centreTextInSquares square " id = "s10"  data-number ="3">
+  <p id = "p1-0"></p>
+</div>
+<!-- row2pos2 -->    
+<div class = "places centreTextInSquares square " id = "s11"  data-number ="4">
+  <p id = "p1-1"></p>
+</div>
+<!-- row2pos3 -->    
+<div class = "places centreTextInSquares square " id = "s12"  data-number ="5">
+  <p id = "p1-2"></p>
+</div>
+
+<!-- row3pos1 -->    
+<div class = "places centreTextInSquares square " id = "s20"  data-number ="6">
+  <p id = "p2-0"></p>
+</div>
+<!-- row3pos2 -->    
+<div class = "places centreTextInSquares square " id = "s21"  data-number ="7">
+  <p id = "p2-1"></p>
+</div>
+<!-- row3pos3 -->    
+<div class = "places centreTextInSquares square " id = "s22"  data-number ="8">
+  <p id = "p2-2"></p>
+</div>
+
+
+<!-- 
+The four lines that separate 
+the noughts and crosses. Each 
+is a div.
+Vertical first then horizontal
+-->    
+
+<!-- left vertical -->    
+<div class = "vertLines" id = "leftVert"></div>
+<!-- right vertical -->    
+<div class = "vertLines" id = "rightVert"></div>
+<!-- top horizontal -->    
+<div class = "horizLines" id = "topHoriz"></div>
+<!-- bottom horizontal -->    
+<div class = "horizLines" id = "bottomHoriz"></div>
+
+</div> <!-- end enclosingDiv -->    
+
+
+
+<!-- -----------  -----------  -----------  -----------  ----------- -->    
+<!-- Now the div that contains the 
+  text that reads "Pick your opponent"
+  and the <p> for that text
+ -->    
+<div class = "pickOpponent">
+<p class = "pickOpponentP">
+  Pick your opponent
+</p>
+</div>
+
+<!-- Now the div that contains the 
+  text that reads "Select" (a button to click 
+  to select a particular AI opponent)
+  and the <p> for that text
+ -->    
+<div  id = "selButtid" class = "selButtClass">
+<p id = "selButtPid" class = "selButtPClass">
+  Select
+</p>
+</div>
+
+
+<!-- Now the player library, where the
+user picks who the
+opponent is. The enclosing div 
+contains xxxx
+ -->    
+ 
+<!-- First the enclosing div.
+  It has a clip-path set to 
+  create a centre square window 
+  through which the user sees 
+  the opponent image   --> 
+<div id = "playLibEncl" class = "playerLibEnclosing clipOne">  
+
+
+<!-- Now the div that holds the 
+three opponent images and which
+animation that the arrow buttons
+triggers slides past the open 
+window of div of class 
+playerImageBox 
+-->  
+<div id = "divOfOpponents" class = "opponentsDiv gandhiShows">
+  
+<!-- opponentImageDiv sets w,h,border while
+  gandhiImageDiv and the two others set 
+position -->
+<!-- div for image of Gandhi -->
+<div class = "gandhiImageDiv opponentImageDiv" >
+</div>
+
+<!-- div for image of Picard -->
+<div class = "picardImageDiv opponentImageDiv">
+</div>
+
+<!-- div for image of the T1000 -->
+<div class = "tThousImageDiv opponentImageDiv">
+</div>
+
+</div>
+
+<div id = "playerPicBox" class = "playerImageBox"> <!-- the box showing image of an opponent -->    
+</div>
+</div> <!-- end enclosing div -->
+
+
+<!-- Now the divs for the left and right arrows -->
+<!-- fri15Oct I moved the arrow divs outside the enclosing div: -->
+<div id = "leftArrow" class = "leftArrowDiv"><!-- Left arrow -->    
+</div>
+
+<div id = "rightArrow" class = "rightArrowDiv"><!-- right arrow -->    
+</div>
+
+
+
+
+<!-- Now a div for the legend for each opponent: -->
+<div id = "oppLegend" class = "opponentLegend">
+  <p class = "opponentLegendP">
+  </p>
+</div>
+
+
+
+<!-- Now the div that congratulates the winner
+  and the <p> that will be the text, eg, 
+    "Congrats Picard!" (added dynamically): -->
+<div id = "divCongrats" class = "congratsDiv">
+<p id = "divCongratsP" class = "congratsDivP">
+
+</p>
+</div>
+
+
+
+<!-- -----------  -----------  -----------  -----------  ----------- -->    
+
+<!-- Now the div that displays the winner -->    
+<div class = "displayDiv">
+  <p id = "displayDivP"></p>
+</div>
+
+
+<!-- Now a div for "Winners" button 
+  and its <p>: -->
+<div id = "hallOfFame" class = "hallOfFameDiv">
+  <p class = "hallOfFameDivP">
+    Winners>
+  </p>
+</div>
+
+<!-- Now a drawer div to contain winners.
+   Plus its <p>: -->
+    <div id = "drawerDivID" class = "drawerDivClass">
+      <p class = "drawerDivPClass">
+         
+        
+      </p>
+    </div>
+    
+
+<!-- Now a dialog box that 
+  automatiacally goes away 
+  after a short while.
+   Plus its <p>: -->
+    <div id = "dialogBoxID" class = "dialogBoxClass">
+      <p class = "dialogBoxPClass">
+        
+      </p>
+    </div>
+
+
+<!-- Now a dialog box that 
+  has two buttons, one that 
+  reads "OK", the other 
+  "Cancel"
+   Plus its <p>: -->
+    <div id = "dialogBoxDismissID" class = "dialogBoxDismissClass">
+      <p class = "dialogBoxDismissPClass">
+        One name or both already in system.
+        Click 'OK' to play as existing player(s), 'Cancel' to change.
+      </p>
+      <div id = "dBoxOKbutton" class = "button okButton">
+        <p class = "buttonText">OK</p>
+      </div>
+      <div id = "dBoxCancelButton" class = "button cancelButton">
+        <p class = "buttonText">Cancel</p>
+      </div>
+    </div>
+
+
+<!-- 
+The div enclosing the reset button and 
+the reset button itself
+-->    
+
+<div id = "resetButtEnclID" class = "resetButtonEnclClass">
+  <div id = "resetButtonID" class = "button resetButton">
+    <p class = "buttonText">
+      Reset
+    </p>
+  </div> 
+</div>
+
+
+<!-- 
+The div (button) to click to show the instructions
+-->    
+
+<div id = "instrButtonID" class = "instrButtonClass">
+  <p class = "instrButtonText">
+      How to play>
+  </p>
+  </div> 
+<div id = "instrDrawerID" class = "instrDrawerClass">
+  <p id = instrTextID>
+    Pick type of game<br><br>
+    Enter player name(s) in field(s) provided or 
+    select a previously used name from the dropdown list(s)<br><br>
+    Use different names for X and 0
+    in two-player games<br><br>
+Names cannot be all spaces <br><br>
+Names cannot be no text <br><br>
+When typing in a name use one not previously used <br><br>
+When playing the AI the human cannot 
+use names Gandhi, Picard or T1000<br><br>
+
+  </p>
+</div>
 
 
 
 
 
+
+
+
+<!-- TEST STUFF FOLLOWS -->    
+<!-- TEST STUFF FOLLOWS     
+<div class = "testButton">
+<p>Test button</p>
+</div>
+-->
 
 
 

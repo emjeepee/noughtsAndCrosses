@@ -1,22 +1,1644 @@
-/*
-.redText {
-color: red;
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+/*- First classes for the 
+form (where users enter names)-*/
+/*- the div that contains the 
+text "Pick type of game" 
+-*/
+.userForm{
+    z-index: 5;
+    
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    
+    width: 380px;
+    height: 200px;
+    
+    border: 1px solid rgb(27, 8, 116);
+    background: rgb(130, 130, 238);
+    display: none;
 
+             }
+    
+/*The <p> that is the text 
+"Enter name" */    
+    .userFormTitleP{
+    position: relative;
+    left: 5px;
+    top: -55px;
+    
+    font-family: 'Limelight', cursive;
+        font-size: 57px;
+        line-height: 57px;
+        letter-spacing: 1.25px ;
+        color: rgb(243, 200, 200);
+        text-shadow: 1px 1px 3px rosybrown;
+    }
+
+/* The form's div that contains the <p>
+whose text is "X"   */    
+.xBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 5px;
+    top: 63px;
+    /*border: 1px solid rgb(27, 8, 116);*/
+    width: 60px;
+    height: 60px;
+
+}    
+
+/* The <p> whose text is "X"   */    
+.formXp{
+        font-family: 'Limelight', cursive;
+        font-size: 57px;
+        line-height: 57px;
+        letter-spacing: 1.25px ;
+        color: rgb(241, 119, 231);
+        text-shadow: 1px 1px 3px rgb(0, 0, 0);
+        opacity: 1;
+       }
+
+/* The div that surrounds the imput and the 
+ddlist for 0's name */
+.nameXdiv{
+    display: block;
+    position: absolute;
+    left: 65px;
+    top: 67px;
+    border: 1px solid rgb(27, 8, 116);
+    width: 307px;
+    height: 52px;
+       }
+/* The input for X name
+that user types in */    
+#xInput{
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    width: 120px;
+    height: 35px;
+    font-size: 33px;
+    color: rgb(238, 203, 224);
+    opacity: 1;
+       }
+
+/* The input for X name
+that user selects from ddlist0 */    
+#xInput1{
+    position: absolute;
+    left: 173px;
+    top: 10px;
+    width: 120px;
+    height: 35px;
+    font-size: 33px;
+    color: rgb(241, 43, 162);
+    opacity: 1;
+       }
+
+
+
+
+
+/* The div containing the <p>
+whose text is "0" */    
+.zeroBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 5px;
+    top: 133px;
+    /*border: 1px solid rgb(27, 8, 116);*/
+    width: 60px;
+    height: 60px;
+}    
+
+/* The <p> whose text is "0" */    
+.form0p{
+    
+    font-family: 'Limelight', cursive;
+        font-size: 57px;
+        line-height: 57px;
+        letter-spacing: 1.25px ;
+        color: rgb(241, 119, 231);
+        text-shadow: 1px 1px 3px rgb(0, 0, 0);
+        opacity: 1;
+        }
+
+/* The div that surrounds the imput and the 
+ddlist for 0's name */    
+.name0div{
+    display: block;
+    
+    position: absolute;
+    left: 65px;
+    top: 137px;
+    border: 1px solid rgb(27, 8, 116);
+    width: 307px;
+    height: 52px;
+        }
+
+/* The input for 0 name 
+that the user types in*/    
+#zeroInput{
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    width: 120px;
+    height: 35px;
+    font-size: 33px;
+    color: rgb(238, 203, 224);
+    opacity: 1;
+          }
+
+/* The input for 0 name
+that user selects from ddlist0 */    
+#zeroInput1{
+    position: absolute;
+    left: 173px;
+    top: 10px;
+    width: 120px;
+    height: 35px;
+    font-size: 33px;
+    color: rgb(241, 43, 162);
+    opacity: 1;
+             }
+
+
+.or{
+    font-family: 'Limelight', cursive;
+    position: absolute;
+    top: -4px;
+    left: 138px;    
+    font-size: 25px;
+        line-height: 25px;
+        letter-spacing: 1.25px ;
+        color: rgb(241, 119, 231);
+        text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+
+/* ------------------------------- */    
+
+/* The enclosing div for 
+the + button (the click of 
+which takes in user names)  */    
+.takeUserNamesEnclosure{
+    z-index: 8;
+
+    position: absolute;
+    top: 110px;
+    left: 470px;
+    
+    width: 100px;
+    height: 100px;
+    
+    border: 1px solid rgb(123, 96, 241);
+    
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+                      }
+
+/* The button that acccepts user names */    
+.takeUserNames{
+position: absolute;
+top: 10px;
+left: 8px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+              }
+
+/* The text for the button that acccepts user names */    
+.takeUserNamesP{
+    /*font-family: 'Limelight', cursive;*/
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 0px;    
+    font-size: 78px;
+        line-height: 15px;
+        letter-spacing: 1.25px ;
+        color: rgb(241, 119, 231);
+        text-shadow: 1px 1px 3px rgb(0, 0, 0);
+
+                }
+
+
+/*- ---------- ------------ ------------ -------------  */
+
+
+
+/*- Two classes. One for the div at the top
+that contains the text "Pick type of game" 
+and one for the <p> for that text -*/
+.pickGame{
+z-index: 8;
+
+position: absolute;
+top: 10px;
+left: 80px;
+
+width: 380px;
+height: 200px;
+
+border: 1px solid rgb(123, 96, 241);
+display: flex;
+  
+flex-direction: column;
+justify-content: center;
+         }
+
+
+.pickGameP{
+position: relative;
+left: 20px;
+
+font-family: 'Limelight', cursive;
+    font-size: 70px;
+    line-height: 70px;
+    letter-spacing: 1.25px ;
+    color: rgb(243, 200, 200);
+    text-shadow: 1px 1px 3px rosybrown;
+}
+
+
+/*- Classes for 
+1) the buttons (divs) that allow 
+the user to select type of game 
+2) For the <p>s for those buttons
+   ie button text
+3) for the div that encloses those buttons  
+4) the News game button
+-*/
+
+/*button*/
+.button{
+
+width: 80px;
+height: 80px;
+
+background: rgb(87, 84, 79);
+border: 2px solid rgb(213, 113, 238);
+border-radius: 5px;
+padding: 0px;
+margin: 0px;
+}
+
+.button:hover {background-color: #a17954;}
+
+.button:active {
+  background-color: #eb969d;
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
+  transform: translateX(3px);
+                }
+
+.buttonText{
+    position: relative;
+    left: 5px;
+    
+    font-family: 'Limelight', cursive;
+        font-size: 21px;
+        line-height: 21px;
+        letter-spacing: 0px ;
+        color: rgb(243, 200, 200);
+        text-shadow: 1px 1px 2.5px rgb(58, 38, 38);
+           }
+
+.twoPlayerButton{
+    position: relative;
+    left: 8px;
 
 }
 
-.blueText {
-color: blue;
-
+.aIButton{
+    position: relative;
+    left: 8px;
 }
 
-.divCont {
-background-color: pink ;
-border-style: double;
-border-width: 4px;
-border-color: black;
- }
- */
 
-
+/* The reset button and 
+the box that encloses
+ the reset buttons*/
  
+ .resetButton{
+    position: relative;
+    left: 8px;
+             }
+  
+ .resetButtonEnclClass{
+    z-index: 8;
+
+    position: absolute;
+    top: 340px;
+    left: 470px;
+    
+    width: 100px;
+    height: 105px;
+    
+    border: 1px solid rgb(123, 96, 241);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+
+
+
+/*The box that encloses
+ the two-player and 
+ play-the-AI buttons*/
+.buttonEnclosure{
+    z-index: 8;
+
+    position: absolute;
+    top: 10px;
+    left: 470px;
+    
+    width: 100px;
+    height: 200px;
+    
+    border: 1px solid rgb(123, 96, 241);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+/*
+"New game" button
+*/
+.newGameButton{
+    z-index: 15;
+              }
+
+/*
+An enclosing div for the
+"New game" button
+*/
+.newGameEnclosure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 14;
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    left: 470px;
+    top: 230px;
+    border:rgb(3, 119, 75) 1px solid
+                 }
+
+/* --------  --------  --------  --------  -------- */
+/* --------  --------  --------  --------  -------- */
+
+
+/* --Now the gameboard- */
+/*
+An enclosing div for the
+squares and the separating lines
+*/
+.enclosingDiv{
+position: absolute;
+top: 340px;
+left: 80px;
+width: 380px;
+height: 380px;
+
+border: 1px solid red;
+
+            }
+
+/*
+The squares that will
+hold noughts or crosses
+*/
+.places{
+width: 100px;
+height: 100px;
+background-color: rgb(31, 230, 203);
+border: 1px solid black;
+border-radius: 5px;
+       }
+
+/* Now a style that all the squares
+have that positions the <p> element in 
+them (this style centres the X or 0)
+*/
+.centreTextInSquares{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+                    }
+
+/* Now the IDs for positioning the 
+squares in which the noughts and crosses 
+go.*/
+
+#s00{
+
+    position: absolute;
+top: 20px;
+left: 20px;
+     }
+
+#s01{
+    position: absolute;
+    top: 20px;
+    left: 140px;
+    }
+
+    #s02{
+    position: absolute;
+    top: 20px;
+    left: 260px;
+    }
+
+    #s10{
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    }
+
+    #s11{
+    position: absolute;
+    top: 140px;
+    left: 140px;
+    }
+
+    #s12{
+    position: absolute;
+    top: 140px;
+    left: 260px;
+     }
+
+     #s20{
+    position: absolute;
+    top: 260px;
+    left: 20px;
+    }
+
+    #s21{
+    position: absolute;
+    top: 260px;
+    left: 140px;
+    }
+
+    #s22{
+    position: absolute;
+    top: 260px;
+    left: 260px;
+    }
+/*
+The classes for the 
+<p>s that hold either a 
+nought or a cross
+*/
+
+.nought{
+    position:relative;
+    top: 6px;
+    font-family: 'Limelight', cursive;
+    font-size: 130px;
+    line-height: 130px;
+    letter-spacing: 1.25px ;
+    color: rgb(185, 172, 241);
+    text-shadow: 1px 1px 3px rosybrown;
+        }
+
+
+.cross{
+    position:relative;
+    top: 6px;
+    font-family: 'Limelight', cursive;
+    font-size: 130px;
+    line-height: 130px;
+    letter-spacing: 1.25px ;
+    color: rgb(243, 200, 200);
+    text-shadow: 1px 1px 3px rosybrown;
+      }
+
+/*
+A class that every 
+square has hard coded in.
+It's only for selection
+of all squares
+*/
+
+.square{
+
+
+}
+
+
+
+
+/*
+The classes for the 
+lines that separate 
+the noughts and crosses
+*/
+
+.vertLines{
+        width: 6px;
+    height: 360px; 
+    background-color: rgb(190, 130, 214);
+          }
+    
+.horizLines{
+        width: 360px;
+        height: 6px; 
+        background-color: rgb(190, 130, 214);
+            }
+    
+/*
+The IDs for the 
+lines that separate 
+the noughts and crosses
+*/
+#leftVert{
+position: absolute;
+left: 128px;
+top: 10px;    
+    
+         }
+
+#rightVert{
+    position: absolute;
+    left: 248px;
+    top: 10px;        
+          }
+
+#topHoriz{
+    position: absolute;
+    left: 10px;
+    top: 128px;     
+         }
+
+#bottomHoriz{
+    position: absolute;
+    left: 10px;
+    top: 248px;     
+            }
+
+
+
+.displayDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    left: 70px;
+    top: 750px;
+    width: 400px;
+    height: 300px;
+    
+    border-radius: 6px;
+    border: 1px solid red;
+    background-color: rosybrown;
+    margin: 0px;
+    padding: 0px;
+             }
+
+#displayDivP{
+    position: relative;
+    left: 5px;
+    font-family: 'Limelight', cursive;
+    font-size: 95px;
+    line-height: 95px;
+    letter-spacing: 1.25px ;
+    color: rgb(185, 172, 241);
+    text-shadow: 1px 1px 3px black;
+            }
+
+
+
+/*
+Now for the elements of the player library
+*/
+.playerLibEnclosing{
+
+position: absolute;
+top: 20px;
+left: 80px;
+
+width: 380px;
+height: 300px;
+
+
+}
+
+/*
+Div of class playerLibEnclosing
+also gets this class,  which 
+creates a window in the middle 
+of an otherwise opaque div 
+*/
+.clipOne{
+background-color: transparent;
+clip-path: inset(100px 140px 100px 140px);
+
+        }
+
+
+
+/*
+The left and rights arrows,
+which trigger animation. 
+The animation slides the 
+div containing the opponent
+images past (and behind) 
+the transparent div of 
+class playerImageBox.
+*/
+
+.leftArrowDiv{
+    display: none;
+    z-index: 6;
+    position: absolute;
+    top: 150px;
+    left: 175px;
+
+    width: 40px;
+    height: 40px;
+    
+    background-image: url("./images/leftArrow.svg") ; 
+    background-repeat: no-repeat ;
+    background-origin: content-box ;
+    background-size: 40px 40px ;
+
+    border: 1px solid  rgb(168, 179, 211);
+}
+
+.leftArrowDiv:active {
+    transform: translateY(3px);
+    transform: translateX(1.5px);
+    box-shadow: 3px 3px 3px rgb(199, 33, 233)  ;
+                        }
+
+
+.rightArrowDiv{
+    display: none;
+
+    z-index: 6;
+    position: absolute;
+    top: 150px;
+    left: 323px;
+
+    width: 40px;
+    height: 40px;
+    
+    background-image: url("./images/rightArrow.svg") ; 
+    background-repeat: no-repeat ;
+    background-origin: content-box ;
+    background-size: 40px 40px ;
+
+    border: 1px solid  rgb(168, 179, 211);
+}
+
+.rightArrowDiv:active {
+    transform: translateY(3px);
+    transform: translateX(1.5px);
+    box-shadow: 3px 3px 3px rgb(199, 33, 233)  ;
+                        }
+
+
+/*the div that is transparent 
+and through which the user 
+sees the image of the opponent*/
+.playerImageBox{
+    display: none;
+
+    position: absolute;
+    top: 100px;
+    left: 140px;
+
+    width: 100px;
+    height: 100px;
+
+    
+    background-color: transparent;
+
+    border: 1px solid  royalblue;
+
+}
+
+/* ------------------------------- */
+/* Now seven classes. The first 
+is for div that contains the 
+text that reads "Pick your opponent".
+The second is for the <p> in that div.
+Then a div that contains the
+divs that contain the opponent
+images. This class simply sets
+width, height and border colour.
+Then a class for the divs that 
+contain the image of the opponent. 
+This class sets width, height
+and border only.
+Then three classesare for 
+the divs containing the images
+of the opponents. Each of those
+classes sets position*/
+
+
+.pickOpponent{
+position: absolute;
+
+left: 80px;
+top: 20px;
+
+width: 400px;
+height: 100px;
+
+display: none;
+flex-direction: column;
+justify-items: center;
+             }
+
+.pickOpponentP{
+    position: relative; 
+       
+       font-family: 'Limelight', cursive;
+       font-size: 35px;
+       line-height: 35px;
+       letter-spacing: 1px ;
+       color: rgb(138, 116, 238);
+       text-shadow: 1px 1px 3px grey;
+                }
+
+
+/*the div that contains the 
+divs that contain the 
+images of the opponents */
+.opponentsDiv{
+    display: none;
+
+    position: absolute;
+    top: 90px;
+    left: 80px;
+
+    width: 380px;
+    height: 120px;
+    
+    background-color: transparent;
+    border: 1px solid  rgb(225, 65, 190);
+            }
+
+/*The div above (of class 
+and id opponentsDiv)
+gets assigned one of three
+classes that position it. 
+These follow. That div has 
+class gandhiShows on startup.
+Clicking the
+arrow buttonsadds and removes
+these classes. The first 
+is the starting position 
+(which ensures Gandhishows 
+in the transparent window).
+The rest ensure that Gandhi
+shows, Picard shows and 
+T1000 shows */
+
+.picardShowsAfterGandhi{
+    animation-name: gandhiToPicard;
+    animation-duration: 0.4s;
+}
+
+.tThousShowsAfterPicard{
+    animation-name: picardToTthous;
+    animation-duration: 0.4s;
+}
+
+.picardShowsAfterTthous{
+    animation-name: tThousToPicard;
+    animation-duration: 0.4s;
+}
+
+.gandhiShowsAfterPicard{
+    animation-name: picardToGandhi;
+    animation-duration: 0.4s;
+}
+
+
+/* The animation code 
+for the four styles above*/
+
+@keyframes gandhiToPicard {
+    from {    top: 90px;
+        left: 120px;}
+    to {    top: 90px;
+        left: 0px;  }
+                          }
+
+@keyframes picardToTthous {
+    from {    top: 90px;
+        left: 0px;}
+    to {    top: 90px;
+        left: -120px;  }
+                          }
+
+@keyframes tThousToPicard {
+    from {    top: 90px;
+        left: -120px;}
+    to {    top: 90px;
+        left: 0px;  }
+                          }
+
+@keyframes picardToGandhi {
+    from {    top: 90px;
+        left: 0px;}
+    to {    top: 90px;
+        left: 120px;  }
+                          }
+
+/* NOw the classes that 
+have to be applied at 
+the end of the animation*/
+
+.gandhiShows{
+ top: 90px;
+left: 120px;
+}
+
+.picardShows{
+    top: 90px;
+    left: 0px;
+}
+
+.tThousShows{
+    top: 90px;
+    left: -120px
+}
+
+
+
+
+/* one of the two classes
+for the divs 
+that contain an image 
+of the opponent*/
+.opponentImageDiv{
+
+    width: 100px;
+    height: 100px;
+    
+    background-color: transparent;
+
+    border: 1px solid  rgb(39, 230, 156);
+            }
+
+/* a class to position
+the div that contains
+the Gandhi image */
+.gandhiImageDiv{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+
+    background-image: url("./images/mG.jpg") ; 
+    background-repeat: no-repeat ;
+    background-origin: content-box ;
+    background-size: 100px 100px ;
+
+    border: 1px solid  rgb(3, 119, 75);
+                 }
+
+
+/* a class to position
+the div that contains
+the Picard image */
+.picardImageDiv{
+    position: absolute;
+    top: 10px;
+    left: 140px;
+
+    background-image: url("./images/jLp.jpg") ; 
+    background-repeat: no-repeat ;
+    background-origin: content-box ;
+    background-size: 100px 100px ;
+
+    border: 1px solid  rgb(3, 119, 75);
+                 }
+
+
+/* a class to position
+the div that contains
+the Gandhi image */
+.tThousImageDiv{
+    position: absolute;
+    top: 10px;
+    left: 260px;
+
+    background-image: url("./images/tThous.jpg") ; 
+    background-repeat: no-repeat ;
+    background-origin: content-box ;
+    background-size: 100px 100px ;
+
+    border: 1px solid  rgb(3, 119, 75);
+                 }
+
+
+/* Now two classes: one for 
+ the div that contains the 
+ legend for each opponent, 
+ the other for the <p> 
+ that sets the text of the 
+ legend*/
+.opponentLegend{
+   z-index: 7;
+    
+   display: none;
+   flex-direction: column;
+   justify-content: center; 
+
+   position: absolute;
+   top: 225px;
+   left: 80px;
+
+   width: 380px;
+   height: 100px;
+
+    background-color: rgb(240, 195, 187);
+
+   border: 1px solid tomato;
+               }
+   
+.opponentLegendP{
+       position: relative; 
+       left: 10px;
+       font-family: 'Limelight', cursive;
+       font-size: 30px;
+       line-height: 30px;
+       letter-spacing: 1.25px ;
+       color: rgb(138, 116, 238);
+       text-shadow: 1px 1px 3px grey;
+                }
+
+
+/* ----------- ------------- -------------- ------------ */
+
+/* Now the congrats box and the
+<p> inside it*/
+.congratsDiv{
+    z-index: 9;
+    
+   display: flex;
+   flex-direction: column;
+   justify-content: center; 
+   align-items: left; 
+
+   position: absolute;
+   top: 755px;
+   left: 72px;
+
+   width: 396px;
+   height: 30px;
+
+   border-radius: 16px;;
+
+    background-color: rgb(240, 195, 187);
+
+   border: 1px solid tomato;
+    
+    }
+    
+    
+    .congratsDivP {
+        display: block;
+        position: relative;
+        left: 5px;
+    
+        font-family: 'Limelight', cursive;
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 0px ;
+        color: rgb(227, 116, 241);
+        text-shadow: 1px 1px 2px rgb(75, 4, 53);    
+        padding: 0px;
+        margin: 0px;
+    }
+    
+/*The hall of fame button and its <p>*/
+.hallOfFameDiv{
+    z-index: 10;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+ 
+    position: absolute;
+    top: 755px;
+    left: 367px;
+ 
+    width: 100px;
+    height: 30px;
+ 
+    border-radius: 0px 16px 16px 0px;
+ 
+     background-color: rgb(240, 195, 187);
+ 
+    border: 1px solid tomato;
+              }
+
+
+.hallOfFameDivP{
+    display: block;
+    position: relative;
+    left: -3px;
+
+    font-family: 'Limelight', cursive;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 1px ;
+    color: rgb(94, 35, 100);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);    
+    padding: 0px;
+    margin: 0px;
+               }
+
+.hallOfFameDivP:hover {background-color: #f1e8ed;}               
+
+.hallOfFameDivP:active {
+    background-color: #eb969d;
+    box-shadow: 0 5px #666;
+    transform: translateY(3px);
+    transform: translateX(3px);
+                  }
+
+/* Now the sliding rawer and its <p> */
+.drawerDivClass{
+    z-index: 10;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+ 
+    position: absolute;
+    top: 787px;
+    left: 367px;
+ 
+    width: 88px;
+    height: fit-content;
+ 
+    background-color: rgb(240, 195, 187);
+
+    border: 1px solid tomato;
+    padding: 0px;
+    margin: 0px;
+                }
+
+.drawerDivPClass{
+    display: block;
+    position: relative;
+    left: 4px;
+    
+    font-family: 'Limelight', cursive;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0px ;
+    color: rgb(94, 35, 100);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255),  -1px -1px 2px rgb(255, 255, 255) ;
+    padding: 0px;
+    margin: 0px;
+                }
+
+
+
+/* --------  ----------  -------------  ----------  */
+
+/* Now the dialog box and its <p> */
+.dialogBoxClass{
+    z-index: 20;
+    
+    display: none;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+ 
+    position: absolute;
+    top: 107px;
+    left: 23px;
+ 
+    width: 488px;
+    height: fit-content;
+ 
+    background-color: rgb(235, 210, 69);
+
+    border: 3px solid tomato;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.dialogBoxPClass{
+    display: block;
+    position: relative;
+    left: 4px;
+    
+    font-family: 'Limelight', cursive;
+    font-size: 55px;
+    line-height: 60px;
+    letter-spacing: 0px ;
+    color: rgb(94, 35, 100);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255),  -1px -1px 2px rgb(255, 255, 255) ;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/*
+Now a class for the <div> and the <p>
+of the dialog box that the
+user has to dismiss (the one 
+with the OK and Cancel 
+buttons)
+*/
+
+/* the dialog box */
+.dialogBoxDismissClass{
+    z-index: 20;
+    
+    display: none;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+ 
+    position: absolute;
+    top: 107px;
+    left: 23px;
+ 
+    width: 488px;
+    height: 200px;
+ 
+    background-color: rgb(235, 210, 69);
+
+    border: 1px solid tomato;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+/* the <p> of the dialog box */
+.dialogBoxDismissPClass{
+    display: block;
+    position: relative;
+    left: 4px;
+    
+    font-family: 'Limelight', cursive;
+    font-size: 30px;
+    line-height: 32px;
+    letter-spacing: 0px ;
+    color: rgb(94, 35, 100);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255),  -1px -1px 2px rgb(255, 255, 255) ;
+    padding: 0px;
+    margin: 0px;
+                        }
+
+
+.okButton{
+    position: absolute;
+    right: 108px;
+    bottom: 10px;
+         }
+
+.cancelButton{
+    position: absolute;
+    right: 18px;
+    bottom: 10px;
+         }
+
+
+
+
+
+
+/*
+Now ids and classes
+for the Select button (div)
+and its <p>
+*/
+
+#selButtid {
+            }
+
+.selButtClass{
+position: absolute;
+top: 95px;
+left: 219px;
+
+display: none;
+flex-direction: column;
+justify-items: center;
+align-items: center;
+
+border: 1px solid red;
+
+width: 100px;
+height: 20px;
+padding: 0px;
+margin: 0px;
+            }
+
+.selButtClass:active {
+  transform: translateY(3px);
+  transform: translateX(1.5px);
+  box-shadow: 2px 2px 2px rgb(199, 33, 233)  ;
+                      }
+
+#selButtPid {
+            }
+
+.selButtPClass{
+    position: relative;
+    left: 5px;
+
+    font-family: 'Limelight', cursive;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 9px ;
+    color: rgb(212, 57, 57);
+    text-shadow: 1px 1px 3px rosybrown;    
+    padding: 0px;
+    margin: 0px;
+              }
+/* -------------------------------------------- */
+
+/* Now the styles for the 
+elements associated with the 
+two dd lists (one dd list 
+for X players, one for 0 players)
+*/
+
+/* First the class and the ids 
+for enclosing div for the dd 
+lists and then for the options
+of the ddlists
+*/
+
+.ddListEnclosureClass {
+    display: none;
+    z-index: 10;
+  
+    background-color: rgb(214, 23, 231) ;
+      
+    width: 90px;
+    height: fit-content;
+    
+    /*border: 10px solid black;*/
+                       }
+  
+  #ddListEnclosureXid {
+    position: absolute;
+    top: 77px;
+    left: 250px;  
+                      }
+  
+  #ddListEnclosure0id {
+    position: absolute;
+    top: 147px;
+    left: 250px;
+                       }
+
+/*  Now five styles. 
+1) First the class that styles only 
+  the look of the div that is an 
+  option of each ddlist and that 
+  reads "Clear".
+  2) Then the hover pseudo class
+  for the class above.
+  3) & 4) Then ids that simply position the X 
+  and 0 "Clear" dd list options. 
+  5) Then the class for the text (<p>)
+  that reads "Clear"
+  */
+
+/*1*/  
+.ddListClearClass{
+    background-color: rgb(241, 115, 136) ;
+    border-style: double;
+    border-width: 1px;
+    border-color: black;
+  
+    width: 90px;
+    height: 18px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+                }
+
+/*2*/
+.ddListClearClass:hover{
+    background-color: rgb(238, 232, 153) ;
+                       }
+/*3*/
+#ddListClear0id{
+position: absolute;
+left: 5px;
+top: 0px;
+               }
+/*4*/
+#ddListClearXid{
+position: absolute;
+left: 5px;
+top: 0px;
+               }
+/*5*/
+.ddListClearPclass{
+    font-size: 15px;
+    line-height: 18px;
+    font-family: 'Limelight';
+                    }
+
+
+  /*
+  Now three classes: 
+  1) The div that the user clicks on to 
+  make the X dd list appear (and that 
+  reads "Existing >>")
+  2) the pseudo class hover for the class 
+  above
+  3) the pseudo class active for the class 
+  above
+  */
+  /*1*/
+    .ddListMainDivXclass {
+    z-index: 2;
+    
+    background-color: pink ;
+    border-style: double;
+    border-width: 1px;
+    border-color: black;
+  
+    position: absolute;
+    top: 57px;
+    left: 245px;
+    width: 120px;
+    height: 19px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+  
+                     }
+/*2*/  
+.ddListMainDivXclass:hover{
+    background-color: rgb(196, 124, 136) ;
+}
+/*3*/
+.ddListMainDivXclass:active{
+    transform: translateY(3px);
+    transform: translateX(1.5px);
+    box-shadow: 6px 6px 3px rgb(227, 186, 235)  ;    
+}
+
+/*4*/  
+/*The <p> that goes in the X ddlist main div (of class above)*/
+  .ddListMainPxClass {
+  position: relative;
+  left: 3px;
+  top: 1px;
+  
+  font-size: 18px;
+  line-height: 19px;
+  font-family: 'Limelight';
+                  }
+  
+  .ddListMainPxID {
+  
+  
+               }
+  
+/* Now for the 0 dd list elements* /
+  /*
+  /*
+  The div that the user clicks on to 
+  make the 0 dd list appear (and that 
+  reads "Existing >>")
+  */
+  
+  .ddListMainDiv0class {
+    z-index: 2;
+    
+    background-color: pink ;
+    border-style: double;
+    border-width: 1px;
+    border-color: black;
+  
+    position: absolute;
+    top: 127px;
+    left: 245px;
+    width: 120px;
+    height: 19px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+  
+                     }
+  
+.ddListMainDiv0class:hover{
+    background-color: rgb(196, 124, 136) ;
+}
+
+.ddListMainDiv0class:active{
+    transform: translateY(3px);
+    transform: translateX(1.5px);
+    box-shadow: 6px 6px 3px rgb(227, 186, 235)  ;    
+}
+
+
+
+  /*The <p> that goes in the X ddlist main div (of class above)*/
+  .ddListMainP0Class {
+  position: relative;
+  left: 3px;
+  top: 1px;
+  
+  font-size: 18px;
+  line-height: 19px;
+  font-family: 'Limelight';
+                  }
+  
+  .ddListMainP0ID {
+  
+  
+               }
+
+
+  /*Class for the option div,
+  which code will create dynamically*/
+  .ddListOptionDivClass {
+    background-color: pink ;
+    border-style: double;
+    border-width: 1px;
+    border-color: black;
+  
+    position: absolute;
+    left: 5px;
+  
+    width: 90px;
+    height: 35px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+                         }
+  
+  .ddListOptionDivClass:hover {
+  background-color: blanchedalmond;
+                              }
+  
+    
+  /*Class for the <p> that will 
+  be a child of the options div.
+  Code creates this <p> dynamically*/
+  .ddListOptionPClass {
+  position: relative;
+  left: 3px;
+  
+  font-size: 20px;
+  line-height: 22px;
+  font-family: 'Limelight';
+
+  color: #666;
+                    }
+  
+  /* the class for the drawer*/
+  .drawerClass{}
+  
+/*Styles for the lements to do with 
+the instructions*/  
+
+.instrButtonClass{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+position: absolute;
+top: 10px;
+left: 580px;
+
+width: 140px;
+height: 25px;
+
+background: rgb(119, 133, 155);
+border: 1px solid rgb(7, 64, 150);
+                }
+  
+.instrButtonClass:hover {background-color: #87d8d4;}
+
+.instrButtonClass:active {
+  background-color: #96e1eb;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+  transform: translateX(2px);
+                }
+    
+  /*The div for the dropdown 
+  instructions drawer*/
+  .instrDrawerClass{
+   display: none;
+   flex-direction: column;
+   justify-content: left;
+   align-items: center;
+
+    padding: 4px;
+
+    position: absolute;
+    top: 35px;
+    left: 580px;
+    
+    width: 140px;
+    height: fit-content;
+    
+    border: 1px solid rgb(49, 50, 51);
+    background: cornflowerblue;
+                        }
+
+/*The drawer text (the <p>)*/
+#instrTextID{
+    position: relative;
+    font-family: 'Limelight', cursive;
+    font-size: 17px;
+    line-height: 15px;
+    letter-spacing: 1px ;
+    color: rgb(238, 208, 243);
+    text-shadow: 1px 1px 1px rgb(26, 24, 24);
+            }
+
+/*The instructions button text (the <p>)*/
+.instrButtonText{
+    position: relative;
+    left: 2px;
+    font-family: 'Limelight', cursive;
+    font-size: 19px;
+    line-height: 19px;
+    letter-spacing: 1px ;
+    color: rgb(233, 193, 240);
+    text-shadow: 1px 1px 1px rgb(26, 24, 24);
+                }
+
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------------
+*/
+/*
+TEST STUFF FOLLOWS 
+*/
+
+.testButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 500px;
+    top: 750px;
+    width: 150px;
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid red;
+               }
+    
+.testButton:active {
+  transform: translateY(3px);
+  transform: translateX(1.5px);
+  box-shadow: 6px 6px 3px rgb(199, 33, 233)  ;
+                      }
+
+
+
+
+
+
